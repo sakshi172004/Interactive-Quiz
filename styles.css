@@ -1,0 +1,113 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #e0f7fa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.quiz-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #00796b; /* Border color for added effect */
+}
+
+.quiz-container::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1), rgba(0,0,0,0) 70%);
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.quiz-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+#question-container {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #00796b;
+    position: relative;
+    z-index: 1;
+}
+
+#options-container {
+    margin-bottom: 30px;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 15px 20px;
+    border: none;
+    background-color: #00796b;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+button.correct {
+    background-color: #4caf50;
+}
+
+button.incorrect {
+    background-color: #f44336;
+}
+
+button:hover {
+    background-color: #004d40;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.hidden {
+    display: none;
+}
+
+#result-container {
+    font-size: 20px;
+    font-weight: bold;
+    color: #004d40;
+    position: relative;
+    z-index: 1;
+}
+
+#restart-button {
+    background-color: #ff5722;
+}
+
+#restart-button:hover {
+    background-color: #e64a19;
+}
+
+
+
+
+
+
+
